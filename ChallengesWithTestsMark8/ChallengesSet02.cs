@@ -28,13 +28,17 @@ namespace ChallengesWithTestsMark8
 
         public double SumOfMinAndMax(IEnumerable<double> numbers)
         {
-            if (numbers != null)
+            if(numbers == null)
             {
-                return numbers.Min() + numbers.Max();
+                return 0;
+            }
+            else if (numbers.Count() == 0)
+            {
+                return 0;
             }
             else
             {
-                return 0;
+                return numbers.Min() + numbers.Max();
             }
         }
 
